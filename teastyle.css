@@ -1,0 +1,403 @@
+/*------IMG-110 - Jason Thompson - Final Class Project - Website-------*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Global styles
+-------------------------*/
+
+body {
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    color: #23392f;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: #23392f;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+/* Header and Footer
+-------------------------*/
+
+header {
+    border: 1px solid black;
+    border-bottom: none;
+    padding-bottom: .5em
+}
+
+header img {
+    background: #23392f no-repeat;
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header ul li {
+    float: left;
+    display: block;
+    width: 33.33%;
+    padding: 0.35em 1em 0.25em 1em;
+    font-weight: 300;
+}
+
+#street {
+    text-align: left;
+}
+
+#phone {
+    text-align: right;
+}
+
+#city {
+    text-align: center;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+footer a {
+    display: inline-block;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+#copyright {
+    font-weight: 100;
+    font-size: .75em
+}
+
+/* Navigation
+-------------------------*/
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: .65em;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+    width: 19%
+}
+
+nav a:hover {
+    font-weight: 400;
+}
+
+/* Main
+-------------------------*/
+
+main {
+    clear: both;
+    border: 1px solid black;
+    margin: 0;
+}
+
+#teafield {
+    padding: 0.25em;
+}
+
+#teafield img {
+    width: 100%
+}
+
+.featured {
+    width: 100%;
+    padding-top: 1em;
+}
+
+.featured p {
+    clear: both;
+    text-align: center;
+    font-weight: 300;
+    padding: 2em;
+    text-transform: lowercase;
+}
+
+figure {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    margin: 0;
+}
+
+figure a {
+    font-weight: 300;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+blockquote {
+    padding: 2em;
+    font-weight: 300;
+    text-align: center;
+    /* display: none;
+    text-transform: lowercase; */
+}
+
+/*Brewing
+-------------------------*/
+
+.brewing {
+    text-align: center;
+    padding: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.brewing iframe {
+    margin: 2em auto;
+    width: 70%;
+    border: none;
+}
+
+.brewing ul li {
+    padding: 0.5em;
+    list-style: url(images/disc.png);
+    text-transform: lowercase;
+    text-align: justify;
+}
+
+.brewing ul {
+    margin-bottom: 3em;
+    padding-left: 0;
+}
+
+/*Tables
+-------------------------*/
+
+table {
+    width: 99.5%;
+    margin-top: 3em;
+    font-weight: 300;
+    text-transform: lowercase;
+    border-collapse: collapse;
+}
+
+table th {
+    height: 2em;
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-left: 1em;
+    background: #d3d7d5;
+}
+
+table td {
+    font-style: italic;
+    padding: 0em 1em 2em 0.5em;
+}
+
+table td img {
+    margin-left: 1em;
+}
+
+table caption {
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-bottom: 1em;
+    padding-left: 3em;
+    text-align: left
+}
+
+table {
+    position: relative;
+}
+
+table span {
+    position: absolute;
+    left: -1000px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+table a:hover span {
+    position: absolute;
+    left: 325px;
+    opacity: 1;
+    z-index: 999;
+}
+
+
+/*Map and Contact Form
+-------------------------*/
+
+#map {
+    margin: 3em;
+}
+
+/* #mapid {
+    height: 450px;
+    width: 450px
+} */
+
+#map iframe {
+    border: none;
+}
+
+#address {
+    float: right;
+    margin: 3em 7em 3em 1em;
+}
+
+#address h2 {
+    margin: 0;
+}
+
+#address ul {
+    font-weight: 200;
+    font-size: 0.8em;
+    list-style: none;
+    padding-left: 0;
+}
+
+#mobile {
+    display: none;
+}
+
+label,
+input {
+    display: block;
+    font-weight: 200;
+    font-size: .7em;
+}
+
+input {
+    margin: 1em 0;
+}
+
+
+
+textarea {
+    border: 1px solid lightgrey;
+}
+
+/*Fix Contact page when resizing
+-------------------------*/
+
+@media only screen and (max-width: 60em) {
+    #address {
+        float: none;
+        margin-left: 3em;
+    }
+}
+
+/*Phone Screens
+-------------------------*/
+
+@media only screen and (max-width: 37.5em) {
+    #wrapper {
+        font-size: 1em
+    }
+    header ul li {
+        font-size: .9em;
+    }
+    header img {
+        height: 4em;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+        padding: 0.25em;
+    }
+    nav a {
+        display: block;
+        padding: .25em;
+        font-size: 1.5em;
+    }
+    .featured img {
+        width: 75px;
+        height: 75px;
+    }
+    .featured p {
+        text-align: justify;
+    }
+    table a:hover span {
+        display: none;
+    }
+    table td {
+        font-size: .9em;
+        padding: 0;
+        padding-right: .25em;
+        font-style: normal;
+    }
+    table td img {
+        width: 60px;
+        height: 60px;
+    }
+    #address {
+        float: none;
+    }
+    input,
+    textarea {
+        border: 1px solid black;
+    }
+    #mobile {
+        display: inline;
+    }
+    #desktop {
+        display: none;
+    }
+    iframe {
+        width: 100%;
+        height: 20em;
+    }
+    #map {
+        margin-left: 3em;
+    }
+    .brewing {
+        padding: .3em;
+        width: 100%;
+    }
+    .brewing iframe {
+        height: 15em;
+    }
+    .brewing ul li {
+        padding: 1em;
+    }
+    .brewing h3 {
+        font-size: 1.1em;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- IMG-110 - Jason Thompson - Final Class Project - Website -->
+    <script src="https://use.fontawesome.com/8af8c781d6.js"></script>
+    <title>Tea Centre :: contact</title>
+    <link rel="stylesheet" type="text/css" href="teastyle.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+    </script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/teaheader.svg" alt="Tea Centre Logo">
+            <ul>
+                <li id="street">267 5th st.</li>
+                <li id="city">courtenay</li>
+                <li id="phone">250 338-6832</li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                </li>
+                <li>
+                    <a href="tea.html">tea</a>
+                </li>
+                <li>
+                    <a href="#">teaware</a>
+                </li>
+                <li>
+                    <a href="brewing.html">brewing</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <article id="address">
+                <h2>contact us</h2>
+                <h3>tea centre</h3>
+                <ul>
+                    <li>267 - 5th street</li>
+                    <li>Courtenay, BC, Canada</li>
+                    <li>V9N 1J5</li>
+                    <li>
+                        <a id="mobile" href="tel:1-250-338-6832">1-250-338-6832</a>
+                        <span id="desktop">1-250-338-6832</span>
+                    </li>
+                    <li>
+                        <a href="mailto:teacentre@shaw.ca">teacentre@shaw.ca</a>
+                    </li>
+                </ul>
+                <!-- <form action="http://110.imgd.ca/formprocess.php" method="post" id="commentForm">
+                    <label for="fullName">*Name: </label>
+                    <input type="text" name="fullName" id="fullName" size="35">
+                    <label for="email">*Email: </label>
+                    <input type="text" name="email" id="email" size="35">
+                    <label for="Comments">*Comments: </label>
+                    <textarea name="Comments" id="Comments" rows="8" cols="34" ></textarea>
+                    <input type="submit" value="Submit" name="submit">
+                    <input type="reset" value="Reset" name="reset">
+                </form> -->
+                <form action="http://110.imgd.ca/formprocess.php" method="post" name="commentForm">
+
+                    <label for="fullName">Name:</label>
+                    <input type="text" name="fullName" id="fullName" size="35" />
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" size="35" />
+
+                    <label for="Comments">Comments:</label>
+                    <textarea name="Comments" id="Comments" rows="8" cols="33"></textarea>
+                    <input id="submitbtn" type="submit" value="Submit" name="submit">
+                    <input id="resetbtn" type="reset" value="Reset" name="reset">
+                </form>
+            </article>
+            <article id="map">
+                <h2>location map</h2>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.039005685784!2d-125.00043798429601!3d49.6912382793778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5488138ab48d0ea7%3A0xb938ff222f0564b9!2sTea+Centre+The!5e0!3m2!1sen!2sca!4v1512145562950"
+                    width="450" height="450" allowfullscreen></iframe>
+            </article>
+        </main>
+        <footer>
+            <a href="mailto:teacentre@shaw.ca">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span class="sr-only">Email</span>
+            </a>
+            <a href="https://twitter.com">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <span class="sr-only">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/Tea-Centre-700977409917464/">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+            <br>
+            <span id="copyright">&copy; 2017 tea centre all rights reserved.</span>
+        </footer>
+    </div>
+
+    <!-- Optional Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <!-- Leaflet style sheet and js cdn files -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+    <!-- jquery form validation cdn files -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>
+    <!-- Jason's local js files -->
+    <script src="js/form-validation.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>
